@@ -1,13 +1,13 @@
 const express = require('express');
-require('dotenv').config();
-const UNITS = process.env.UNITS || 'metric';
+app = express();
 
 
-let response = `This is version 3 ${UNITS} of the app.` + `\n`;
+var response;
 
 app.get('/', function (req, res) {
+    var UNITS = process.env.UNITS || 'ee';
 
-    //response = 'This is version 3 ${UNITS} of the app.' + '\n';
+    response = `${UNITS} sad is version 4 of the app.` + `\n`;
 
     //send the response to the client
     res.send(response);
